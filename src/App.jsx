@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ProductCard from './components/product-card';
+import RandomProduct from './components/random-product';
 
 const BASE_URL = 'https://fakestoreapi.com';
 
@@ -24,6 +25,7 @@ function App() {
 					<ProductCard {...product} key={product.id} />
 				))}
 			</div>
+			<RandomProduct products={products} />
 		</div>
 	);
 }
